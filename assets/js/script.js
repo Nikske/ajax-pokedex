@@ -1,9 +1,9 @@
 // Wolf
 
 let input = document.getElementById("pokemon");
-
-function randomNumber(number) {
-
+// Function to get a random number, used later to get random moves.
+function randomNumber(num) {
+    return Math.round(Math.random() *num);
 }
 
 document.getElementById("run").addEventListener("click", function() {
@@ -12,16 +12,16 @@ document.getElementById("run").addEventListener("click", function() {
     })
         .then((data) => {
             console.log(data);
-            // Image
+            /* SPRITE */
             document.getElementById("pokeimg").src = data['sprites']['front_default'];
-            // Moves
-            let moveList = [];
-            for (let i = 0; i<4; i++) {
-                moveList.push(data['moves'][i]['move']['name']);
-            }
-            document.getElementById("move1").innerHTML= moveList[0];
-            document.getElementById("move2").innerHTML= moveList[1];
-            document.getElementById("move3").innerHTML= moveList[2];
-            document.getElementById("move4").innerHTML= moveList[3];
+            /* MOVES */
+            // 4 random moves - Still need to prevent duplicates
+            document.getElementById("move1").innerHTML = data['moves'][randomNumber(data['moves'].length)]['move']['name'];
+            document.getElementById("move2").innerHTML = data['moves'][randomNumber(data['moves'].length)]['move']['name'];
+            document.getElementById("move3").innerHTML = data['moves'][randomNumber(data['moves'].length)]['move']['name'];
+            document.getElementById("move4").innerHTML = data['moves'][randomNumber(data['moves'].length)]['move']['name'];
+
+
+
         })
 });
