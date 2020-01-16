@@ -7,6 +7,8 @@
 </head>
 <body>
 <div id="pokedex">
+    <input type="text" id="pokemon">
+    <button id="run">GO</button>
     <div id="left">
         <div id="logo"></div>
         <div id="bg_curve1_left"></div>
@@ -32,6 +34,7 @@
             </div>
             <div id="picture">
                 <img id="pokeimg">
+                <img id="preevoimg">
             </div>
             <div id="buttonbottomPicture"></div>
             <div id="speakers">
@@ -64,7 +67,7 @@
     </div>
     <div id="right">
         <div id="stats">
-            <p id="pokename"></p>
+            <strong><p id="pokename"></p></strong>
             <p id="pokeid"></p>
             <ul id="pokemoves">
                 <li id="move1"></li>
@@ -72,8 +75,7 @@
                 <li id="move3"></li>
                 <li id="move4"></li>
             </ul>
-            <p id="previous"></p>
-            <img id="preevo">
+            <strong><p id="previous"></p></strong>
         </div>
         <div id="blueButtons1">
             <div class="blueButton"></div>
@@ -101,5 +103,7 @@
         <div id="curve2_right"></div>
     </div>
 </div>
+<script src="assets/js/script.js"></script>
+<script src="assets/js/poked.js"></script>
 </body>
 </html>
