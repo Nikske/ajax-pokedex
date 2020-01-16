@@ -6,7 +6,7 @@ document.getElementById("run").addEventListener("click", function() {
         return response.json();
     })
         .then((data) => {
-            console.log(data);
+
 
             document.getElementById("pokename").innerHTML=data['name'];
             document.getElementById("pokeid").innerHTML=data['id'];
