@@ -16,24 +16,21 @@ document.getElementById("run").addEventListener("click", function() {
             document.getElementById("pokeimg").src = data['sprites']['front_default'];
 
             /* MOVES */
-            // 4 random moves - Still need to prevent duplicates & And Ditto only has one move, the bastard
+            // Ditto is still at large and a problem
             let randomMoves = [];
+            // Variable for readability, -1 because 0 is the start, not 1
             let lengthARR = data['moves'].length - 1;
             for (let i=0; i<data['moves'].length; i++) {
                 randomMoves.push(data['moves'][randomNumber(lengthARR)]['move']['name']);
             }
-            randomMoves.filter((item, index) => {
+            // Filter to filter out duplicates. Remember that your return needs something to return to, silly.
+            let filteredMoves = randomMoves.filter((item, index) => {
                 return randomMoves.indexOf(item) === index;
             });
-            console.log(randomMoves);
-            /*let moves = [];
-            for (let i = 0; i<data['moves'].length; i++) {
-                moves.push(data['moves'][i]['move']['name']);
+            // Inserting randomised, filtered moves
+            for (let j = 1; j < 5; j++) {
+            document.getElementById("move" + j + "").innerHTML = filteredMoves[j];
             }
-            console.log(moves);*/
-            /*for (let i = 1; i < 5; i++) {
-            document.getElementById("move" + i + "").innerHTML = data['moves'][randomNumber(data['moves'].length)]['move']['name'];
-            }*/
 
         })
 });
