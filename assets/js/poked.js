@@ -8,7 +8,7 @@ document.getElementById("run").addEventListener("click", function() {
         .then((data) => {
 
 
-            document.getElementById("pokename").innerHTML=data['name'];
+            document.getElementById("pokename").innerHTML=data['name'].toUpperCase();
             document.getElementById("pokeid").innerHTML=data['id'];
 
 
