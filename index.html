@@ -1,3 +1,11 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pokédex</title>
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
 <div id="pokedex">
     <div id="left">
         <div id="logo"></div>
@@ -23,7 +31,7 @@
                 <div id="buttontopPicture2"></div>
             </div>
             <div id="picture">
-                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/200653/psykokwak.gif" alt="psykokwak" height="170" />
+                <img id="pokeimg">
             </div>
             <div id="buttonbottomPicture"></div>
             <div id="speakers">
@@ -56,23 +64,16 @@
     </div>
     <div id="right">
         <div id="stats">
-            <strong>Name:</strong> pokedek<br/>
-            <strong>Type:</strong> pokeid<br/>
-            <strong>img:</strong> pokeimg<br/>
-            <strong>moves:</strong>pokemoves<br/>
-
+            <p id="pokename"></p>
+            <p id="pokeid"></p>
             <ul id="pokemoves">
                 <li id="move1"></li>
                 <li id="move2"></li>
                 <li id="move3"></li>
                 <li id="move4"></li>
             </ul>
-
             <p id="previous"></p>
             <img id="preevo">
-
-            <strong>The duck Pokemon</strong><br/>
-            Uses mysterious powers to perform various attacks.
         </div>
         <div id="blueButtons1">
             <div class="blueButton"></div>
@@ -100,3 +101,5 @@
         <div id="curve2_right"></div>
     </div>
 </div>
+</body>
+</html>

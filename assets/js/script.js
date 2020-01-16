@@ -20,12 +20,7 @@ document.getElementById("run").addEventListener("click", function() {
             let randomMoves = [];
             let lengthARR = data['moves'].length - 1;
             for (let i=0; i<data['moves'].length; i++) {
-                try {
-                    randomMoves.push(data['moves'][randomNumber(lengthARR)]['move']['name']);
-                }
-                catch (e) {
-                    console.log(e.toString());
-                }
+                randomMoves.push(data['moves'][randomNumber(lengthARR)]['move']['name']);
             }
             randomMoves.filter((item, index) => {
                 return randomMoves.indexOf(item) === index;
